@@ -28,8 +28,8 @@
 
 <div align="center">
 <sub>Built with ❤︎ by
-<a href="https://tailec.com">Pawel Krawiec</a>
-</a>
+Pawel Krawiec
+</sub>
 </div>
 
 ## Table of Contents
