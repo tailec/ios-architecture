@@ -95,5 +95,5 @@ Install pods:
 
 **Note:** Master branch contains only README file and it doesn't compile.
 
-### Licence
+#### Licence
 MIT.
