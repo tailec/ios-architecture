@@ -14,21 +14,16 @@
 
 <div align="center">
 <!-- Last commit -->
-<a href="https://img.shields.io/github/last-commit/tailec/ios-architecture.svg" alt="last commit">
-</a>
-<!-- License -->
-<a href="https://img.shields.io/badge/licence%20-MIT%20-brightgreen.svg" alt="license">
-</a>
-<!-- Swift version -->
-<a href="https://img.shields.io/badge/swift%20version-4.2-brightgreen.svg" alt="swift version">
-</a>
+<img src="https://img.shields.io/github/last-commit/tailec/ios-architecture.svg" alt="last commit"/>
 <!-- Open issues -->
-<a href="https://img.shields.io/github/issues-raw/tailec/ios-architecture.svg" alt="open issues">
-</a>
+<img src="https://img.shields.io/github/issues-raw/tailec/ios-architecture.svg" alt="open issues" />
+<!-- Swift version -->
+<img src="https://img.shields.io/badge/swift%20version-4.2-orange.svg" alt="swift version">
 <!-- Platform -->
-<a href="https://img.shields.io/badge/platform-ios-lightgrey.svg" alt="platform">
-</a>
+<img src="https://img.shields.io/badge/platform-ios-lightgrey.svg" alt="platform" />
 </div>
+<!-- License -->
+<img src="https://img.shields.io/badge/licence%20-MIT%20-blue.svg" alt="license" />
 
 
 <div align="center">
