@@ -18,12 +18,12 @@
 <!-- Open issues -->
 <img src="https://img.shields.io/github/issues-raw/tailec/ios-architecture.svg" alt="open issues" />
 <!-- Swift version -->
-<img src="https://img.shields.io/badge/swift%20version-4.2-orange.svg" alt="swift version">
+<img src="https://img.shields.io/badge/swift%20version-4.2-brightgreen.svg" alt="swift version">
 <!-- Platform -->
 <img src="https://img.shields.io/badge/platform-ios-lightgrey.svg" alt="platform" />
-</div>
 <!-- License -->
 <img src="https://img.shields.io/badge/licence%20-MIT%20-blue.svg" alt="license" />
+</div>
 
 
 <div align="center">
