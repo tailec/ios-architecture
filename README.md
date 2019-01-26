@@ -41,9 +41,9 @@ Examples are grouped in separate repository branches.
 ### Examples
 | Example | Description |
 | ------------- | ------------- |
-| [mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift]() and observables as binding mechanism between `ViewController` and `ViewModel`. |
-| [mvvm-rxswift-functions](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift]() and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
-| [mvvm-rxswift-subjects](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift]() with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
+| [mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
+| [mvvm-rxswift-functions](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
+| [mvvm-rxswift-subjects](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
 
 ### Examples in progress
 | Example | Description |
@@ -95,5 +95,5 @@ Install pods:
 
 **Note:** Master branch contains only README file and it doesn't compile.
 
-#### Licence
+## Licence
 MIT.
