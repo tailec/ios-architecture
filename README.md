@@ -72,7 +72,7 @@ The app is a simple list of repositories fetched from GitHub with a text field f
 The following GIF illustrates the UI of the app:
 
 
-![](https://github.com/tailec/ios-architecture/app-ui.gif)
+![app-ui](app-ui.gif)
 
 
 ## Open in XCode
