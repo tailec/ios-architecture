@@ -42,7 +42,7 @@ Examples are grouped in separate repository branches.
 | Example | Description |
 | ------------- | ------------- |
 | [mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
-| [mvvm-rxswift-functions-subjects-observables](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-functions-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
+| [mvvm-rxswift-functions-subjects-observables](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-functions-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
 | [mvvm-rxswift-subjects-observables](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
 | [mvvm-delegation](https://github.com/tailec/ios-architecture/tree/mvmm-delegates) | Binds `ViewController` and `ViewModel` using delegation pattern.   |
 
