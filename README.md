@@ -44,13 +44,13 @@ Examples are grouped in separate repository branches.
 | [mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
 | [mvvm-rxswift-functions](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
 | [mvvm-rxswift-subjects](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
+| [mvvm-delegation](https://github.com/tailec/ios-architecture/tree/mvmm-delegates) | Binds `ViewController` and `ViewModel` using delegation pattern.   |
 
 ### Examples in progress
 | Example | Description |
 | ------------- | ------------- |
 | mvc| In Progress |
 | mvp| In Progress |
-| mvvm-delegation | In Progress  |
 | mvvm-closures | In Progress  |
 | mvvm-reactive-swift | In Progress  |
 | reswift | In Progress  |
@@ -89,7 +89,7 @@ Install pods:
 `pod install`
 
 
-**Note:**: Some of the examples don't use external libraries so `pod install` is not required.
+**Note:** Some of the examples don't use external libraries so `pod install` is not required.
 
 **Note:** When switching branches, quit XCode first. It copies ignored `.xcworkspace` and `.xcproj` for some reason.
 
