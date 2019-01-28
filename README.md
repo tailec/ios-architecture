@@ -75,7 +75,7 @@ The following GIF illustrates the UI of the app:
 ![app-ui](app-ui.gif)
 
 
-## Open in XCode
+## Open in Xcode
 Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
@@ -91,7 +91,7 @@ Install pods:
 
 **Note:** Some of the examples don't use external libraries so `pod install` is not required.
 
-**Note:** When switching branches, quit XCode first. It copies ignored `.xcworkspace` and `.xcproj` for some reason.
+**Note:** When switching branches, quit Xcode first. It copies ignored `.xcworkspace` and `.xcproj` for some reason.
 
 **Note:** Master branch contains only README file and it doesn't compile.
 
