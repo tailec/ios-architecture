@@ -54,7 +54,7 @@ This repository hosts each sample app in separate branches.
 ### Multiple screens app examples
 | Example | Description |
 | ------------- | ------------- |
-| [tmdb-mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
+| [tmdb-mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
 
 
 ### Single screen app examples
