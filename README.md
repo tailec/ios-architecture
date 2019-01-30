@@ -44,6 +44,8 @@ Pawel Krawiec
 
 
 </div>
+
+
 ## Architectures
 This repository hosts each sample app in separate branches.
 
