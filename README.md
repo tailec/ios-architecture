@@ -52,6 +52,10 @@ This repository hosts each sample app in separate branches.
 :star: Click the title of example to see detailed README information about specific architecture.
 
 ### Multiple screens app examples
+🔒 ** If you want to login, use username `iostest` and password `test`.**
+
+*If you're a [themoviedb](themoviedb.com) user, please use your own account and API key!*
+
 | Example | Description |
 | ------------- | ------------- |
 | [tmdb-mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
