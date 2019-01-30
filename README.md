@@ -31,14 +31,33 @@
 Pawel Krawiec
 </sub>
 </div>
+<br />
+<br />
 
+
+<div align="center">
+
+
+| Multi-screen examples | Single screen examples |
+| ------------- | ------------- |
+| ![app-ui](multiscreen-ui.gif) | ![app-ui](app-ui.gif)|
+
+
+</div>
 ## Architectures
-Examples are grouped in separate repository branches.
+This repository hosts each sample app in separate branches.
 
 :star: Click the title of example to see detailed README information about specific architecture.
 
+### Multiple screens app examples
+| Example | Description |
+| ------------- | ------------- |
+| [tmdb-mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
 
-### Examples
+
+### Single screen app examples
+The purpose of having examples with single page applications is highlighting connection between view code and business logic code.
+
 | Example | Description |
 | ------------- | ------------- |
 | [mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/mvvm-rxswift-pure-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
@@ -59,21 +78,19 @@ Examples are grouped in separate repository branches.
 | ribs | In Progress  |
 
 
+## Sample apps
+Apps in this repository are split into 2 groups - single screen and multiscreen.
 
 
-## Sample project
+Simple one screen apps aim to be simple enough that you can understand crucial bits about given architecture (i.e. bindings between `ViewModel` and `ViewController` in MVVM examples).
+However, some other architectures require more complexity (i.e. RIBs architecture) and this is the reason of having multiscreen examples in this project.
 
-Most of the projects are simple one screen apps so you can understand crucial bits about given architecture (i.e. bindings between `ViewModel` and `ViewController` in MVVM examples).
+#### Single screen app
+Single screen app is a simple list of repositories fetched from GitHub and a text field that makes queries for new data.
 
-However, some other architectures require more complexity (i.e. RIBs architecture) and the app may differ slightly.
-
-The app is a simple list of repositories fetched from GitHub with a text field for querying new data.
-
-The following GIF illustrates the UI of the app:
-
-
-![app-ui](app-ui.gif)
-
+#### Multiscreen app
+Multiscreen app is a simple [themoviedb](themoviedb.com) client.
+It lets user to authenticate, view popular movies/tv shows or actors and see details about each movie. Also, it has a search screen that allows you to browse movies or actors.
 
 ## Open in Xcode
 Clone the repository:
