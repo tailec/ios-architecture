@@ -61,7 +61,7 @@ This repository hosts each sample app in separate directory.
 
 | Example | Description |
 | ------------- | ------------- |
-| [tmdb-mvvm-rxswift-pure](tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
+| [tmdb-mvvm-rxswift-pure](tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. (README in progress) |
 
 
 ### Single screen app examples
@@ -69,11 +69,11 @@ The purpose of having examples with single page applications is highlighting con
 
 | Example | Description |
 | ------------- | ------------- |
-| [mvc](mvc) | Standard MVC pattern recommended by Apple. Uses composition design pattern to make `ViewController`  smaller. |
+| [mvc](mvc) | Standard MVC pattern recommended by Apple. Uses composition design pattern to make `ViewController`  smaller.  (README in progress)  |
 | [mvvm-rxswift-pure](mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
 | [mvvm-rxswift-functions-subjects-observables](mvvm-functions-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
 | [mvvm-rxswift-subjects-observables](mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
-| [mvvm-delegates](mvvm-delegates) | Binds `ViewController` and `ViewModel` using delegation pattern.   |
+| [mvvm-delegates](mvvm-delegates) | Binds `ViewController` and `ViewModel` using delegation pattern.  (README in progress)    |
 
 ### Examples in progress
 | Example | Description |
