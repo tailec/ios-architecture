@@ -50,7 +50,7 @@ Pawel Krawiec
 
 
 ## Architectures
-This repository hosts each sample app in separate branches.
+This repository hosts each sample app in separate directory.
 
 :star: Click the title of example to see detailed README information about specific architecture.
 
@@ -61,7 +61,7 @@ This repository hosts each sample app in separate branches.
 
 | Example | Description |
 | ------------- | ------------- |
-| [tmdb-mvvm-rxswift-pure](https://github.com/tailec/ios-architecture/tree/tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
+| [tmdb-mvvm-rxswift-pure](tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. |
 
 
 ### Single screen app examples
@@ -106,9 +106,9 @@ Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
 
-Checkout one of the branches:
+Go to example directory, for example:
 
-`git checkout mvvm-rxswift-pure-observables`
+`cd mvvm-pure-swift`
 
 Install pods:
 
@@ -116,10 +116,6 @@ Install pods:
 
 
 **Note:** Some of the examples don't use external libraries so `pod install` is not required.
-
-**Note:** When switching branches, quit Xcode first. It copies ignored `.xcworkspace` and `.xcproj` for some reason.
-
-**Note:** Master branch contains only README file and it doesn't compile.
 
 ## Licence
 MIT.
