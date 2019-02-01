@@ -10,7 +10,7 @@ This example uses RxSwift observables as binding mechanism between `ViewModel` a
 
 
 ## Implementation
-
+In progress.
 
 
 ## Installation
@@ -18,9 +18,9 @@ Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
 
-Checkout `mvvm-rxswift-pure-observables` branch:
+Navigate to `tmdb-mvvm-pure` directory:
 
-`git checkout mvvm-rxswift-pure-observables`
+`cd tmdb-mvvm-pure`
 
 Install dependencies:
 

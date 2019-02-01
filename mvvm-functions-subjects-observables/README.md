@@ -17,10 +17,9 @@ Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
 
-Checkout `mvvm-rxswift-functions-subjects-observables` branch:
+Navigate to `mvvm-rxswift-functions-subjects-observables` directory:
 
-`git checkout mvvm-rxswift-functions-subjects-observables`
-
+`cd mvvm-rxswift-functions-subjects-observables`
 
 Install dependencies:
 

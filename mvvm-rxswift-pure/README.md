@@ -31,9 +31,9 @@ Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
 
-Checkout `mvvm-rxswift-pure-observables` branch:
+Navigate to `mvvm-rxswift-pure` directory:
 
-`git checkout mvvm-rxswift-pure-observables`
+`cd mvvm-rxswift-pure`
 
 Install dependencies:
 
