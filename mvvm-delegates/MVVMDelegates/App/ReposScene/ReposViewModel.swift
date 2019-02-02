@@ -9,12 +9,9 @@
 import Foundation
 
 protocol ReposViewModelDelegate: class {
-    func reposViewModel(_ reposViewModel: ReposViewModel,
-                        isLoading: Bool)
-    func reposViewModel(_ reposViewModel: ReposViewModel,
-                        didReceiveRepos repos: [RepoViewModel])
-    func reposViewModel(_ reposViewModel: ReposViewModel,
-                        didSelectId id: Int)
+    func reposViewModel(isLoading: Bool)
+    func reposViewModel(didReceiveRepos repos: [RepoViewModel])
+    func reposViewModel(didSelectId id: Int)
 }
 
 final class ReposViewModel {
@@ -25,16 +22,17 @@ final class ReposViewModel {
     private let throttle = Throttle(minimumDelay: 0.3)
     private var currentSearchNetworkTask: URLSessionDataTask?
     private var lastQuery: String?
-    // Dependencies
+    
+    // MARK: Dependencies
     private let networkingService: NetworkingService
     
     init(networkingService: NetworkingService) {
         self.networkingService = networkingService
     }
     
-    // Inputs
+    // MARK: Inputs
     func ready() {
-        delegate?.reposViewModel(self, isLoading: true)
+        delegate?.reposViewModel(isLoading: true)
         networkingService.searchRepos(withQuery: "swift") { [weak self] repos in
             guard let strongSelf  = self else { return }
             strongSelf.finishSearching(with: repos)
@@ -53,14 +51,15 @@ final class ReposViewModel {
     
     func didSelectRow(at indexPath: IndexPath) {
         guard let repos = repos else { return }
-        delegate?.reposViewModel(self, didSelectId: repos[indexPath.item].id)
+        delegate?.reposViewModel(didSelectId: repos[indexPath.item].id)
     }
     
-    // Private
+    // MARK: Private methods
+    
     private func startSearchWithQuery(_ query: String) {
         currentSearchNetworkTask?.cancel() // cancel previous pending request
         
-        delegate?.reposViewModel(self, isLoading: true)
+        delegate?.reposViewModel(isLoading: true)
 
         currentSearchNetworkTask = networkingService.searchRepos(withQuery: query) { [weak self] repos in
             guard let strongSelf  = self else { return }
@@ -69,12 +68,12 @@ final class ReposViewModel {
     }
     
     private func finishSearching(with repos: [Repo]) {
-        delegate?.reposViewModel(self, isLoading: false)
+        delegate?.reposViewModel(isLoading: false)
         
         self.repos = repos
         let repoViewModels = repos.map { RepoViewModel(repo: $0) }
         
-        delegate?.reposViewModel(self, didReceiveRepos: repoViewModels)
+        delegate?.reposViewModel(didReceiveRepos: repoViewModels)
     }
 }
 

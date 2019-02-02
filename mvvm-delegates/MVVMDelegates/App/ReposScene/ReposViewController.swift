@@ -59,23 +59,6 @@ class ReposViewController: UIViewController {
     }
 }
 
-extension ReposViewController: ReposViewModelDelegate {
-    func reposViewModel(_ reposViewModel: ReposViewModel, isLoading: Bool) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
-    }
-    
-    func reposViewModel(_ reposViewModel: ReposViewModel, didReceiveRepos repos: [RepoViewModel]) {
-        data = repos
-        tableView.reloadData()
-    }
-    
-    func reposViewModel(_ reposViewModel: ReposViewModel, didSelectId id: Int) {
-        let alertController = UIAlertController(title: "\(id)", message: nil, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
-}
-
 extension ReposViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data?.count ?? 0
@@ -98,5 +81,24 @@ extension ReposViewController: UITableViewDelegate {
 extension ReposViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         viewModel.didChangeQuery(searchController.searchBar.text ?? "")
+    }
+}
+
+// MARK: ViewModel Delegate
+
+extension ReposViewController: ReposViewModelDelegate {
+    func reposViewModel(isLoading: Bool) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+    }
+    
+    func reposViewModel(didReceiveRepos repos: [RepoViewModel]) {
+        data = repos
+        tableView.reloadData()
+    }
+    
+    func reposViewModel(didSelectId id: Int) {
+        let alertController = UIAlertController(title: "\(id)", message: nil, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }
