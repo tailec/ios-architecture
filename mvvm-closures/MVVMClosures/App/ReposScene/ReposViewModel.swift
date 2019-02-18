@@ -9,8 +9,7 @@
 import Foundation
 
 final class ReposViewModel {
-
-	// MARK: Outputs
+	// Outputs
 	var isRefreshing: ((Bool) -> Void)?
 	var didUpdateRepos: (([RepoViewModel]) -> Void)?
 	var didSelecteRepo: ((Int) -> Void)?
@@ -25,15 +24,14 @@ final class ReposViewModel {
     private var currentSearchNetworkTask: URLSessionDataTask?
     private var lastQuery: String?
     
-    // MARK: Dependencies
+    // Dependencies
     private let networkingService: NetworkingService
     
     init(networkingService: NetworkingService) {
         self.networkingService = networkingService
     }
     
-    // MARK: Inputs
-    
+    // Inputs
     func ready() {
         isRefreshing?(true)
         networkingService.searchRepos(withQuery: "swift") { [weak self] repos in
@@ -57,8 +55,7 @@ final class ReposViewModel {
         didSelecteRepo?(repos[indexPath.item].id)
     }
     
-    // MARK: Private methods
-    
+    // Private
     private func startSearchWithQuery(_ query: String) {
         currentSearchNetworkTask?.cancel() // cancel previous pending request
         

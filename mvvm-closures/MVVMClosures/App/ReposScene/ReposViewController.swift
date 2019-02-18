@@ -55,20 +55,20 @@ class ReposViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        viewModel.isRefreshing = isLoading(_:)
-		viewModel.didUpdateRepos = didReceiveRepos(_:)
-		viewModel.didSelecteRepo = didSelectRepo(_:)
-    }
-    
-    private func didReceiveRepos(_ repos: [RepoViewModel]) {
-        data = repos
-        tableView.reloadData()
-    }
-    
-    private func didSelectRepo(_ id: Int) {
-        let alertController = UIAlertController(title: "\(id)", message: nil, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertController, animated: true, completion: nil)
+        viewModel.isRefreshing = { loading in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = loading
+        }
+		viewModel.didUpdateRepos = { [weak self] repos in
+            
+            strongSelf.data = repos
+            strongSelf.tableView.reloadData()
+        }
+		viewModel.didSelecteRepo = { [weak self] id in
+            guard let strongSelf = self else { return }
+            let alertController = UIAlertController(title: "\(id)", message: nil, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            strongSelf.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -95,8 +95,4 @@ extension ReposViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         viewModel.didChangeQuery(searchController.searchBar.text ?? "")
     }
-}
-
-private func isLoading(_ loading: Bool) {
-    UIApplication.shared.isNetworkActivityIndicatorVisible = loading
 }
