@@ -1,5 +1,5 @@
-# mvvm-delegation
-This example uses standard iOS delegation pattern and function calls to communicate between `ViewModel` and `ViewController`.
+# MVP
+This example uses standard iOS MVP pattern.
 
 
 ## Implementation
@@ -16,8 +16,8 @@ Clone the repository:
 
 `git clone git@github.com:tailec/ios-architecture.git`
 
-Navigate to  `mvvm-delegates` directory:
+Navigate to  `mvp` directory:
 
-`cd mvvm-delegates`
+`cd mvp`
 
 No `pod install` is required in this example.

@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D217917821FD22E60019D974 /* MVVMDelegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDelegates.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D217917821FD22E60019D974 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D217917B21FD22E60019D974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D217918221FD22E80019D974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D217918521FD22E80019D974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		D217916F21FD22E60019D974 = {
 			isa = PBXGroup;
 			children = (
-				D217917A21FD22E60019D974 /* MVVMDelegates */,
+				D217917A21FD22E60019D974 /* MVP */,
 				D217917921FD22E60019D974 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		D217917921FD22E60019D974 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D217917821FD22E60019D974 /* MVVMDelegates.app */,
+				D217917821FD22E60019D974 /* MVP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D217917A21FD22E60019D974 /* MVVMDelegates */ = {
+		D217917A21FD22E60019D974 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
 				D21791A921FD23130019D974 /* App */,
@@ -65,7 +65,7 @@
 				D217918421FD22E80019D974 /* LaunchScreen.storyboard */,
 				D217918721FD22E80019D974 /* Info.plist */,
 			);
-			path = MVVMDelegates;
+			path = MVP;
 			sourceTree = "<group>";
 		};
 		D21791A921FD23130019D974 /* App */ = {
@@ -116,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D217917721FD22E60019D974 /* MVVMDelegates */ = {
+		D217917721FD22E60019D974 /* MVP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D21791A021FD22E80019D974 /* Build configuration list for PBXNativeTarget "MVVMDelegates" */;
+			buildConfigurationList = D21791A021FD22E80019D974 /* Build configuration list for PBXNativeTarget "MVP" */;
 			buildPhases = (
 				D217917421FD22E60019D974 /* Sources */,
 				D217917521FD22E60019D974 /* Frameworks */,
@@ -128,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = MVVMDelegates;
+			name = MVP;
 			productName = MVVMDelegates;
-			productReference = D217917821FD22E60019D974 /* MVVMDelegates.app */;
+			productReference = D217917821FD22E60019D974 /* MVP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D217917321FD22E60019D974 /* Build configuration list for PBXProject "MVVMDelegates" */;
+			buildConfigurationList = D217917321FD22E60019D974 /* Build configuration list for PBXProject "MVP" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D217917721FD22E60019D974 /* MVVMDelegates */,
+				D217917721FD22E60019D974 /* MVP */,
 			);
 		};
 /* End PBXProject section */
@@ -327,12 +327,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMDelegates/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMDelegates;
+				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,12 +344,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMDelegates/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMDelegates;
+				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D217917321FD22E60019D974 /* Build configuration list for PBXProject "MVVMDelegates" */ = {
+		D217917321FD22E60019D974 /* Build configuration list for PBXProject "MVP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D217919E21FD22E80019D974 /* Debug */,
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D21791A021FD22E80019D974 /* Build configuration list for PBXNativeTarget "MVVMDelegates" */ = {
+		D21791A021FD22E80019D974 /* Build configuration list for PBXNativeTarget "MVP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D21791A121FD22E80019D974 /* Debug */,
