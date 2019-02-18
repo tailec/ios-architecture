@@ -70,18 +70,17 @@ The purpose of having examples with single page applications is highlighting con
 | Example | Description |
 | ------------- | ------------- |
 | [mvc](mvc) | Standard MVC pattern recommended by Apple. Uses composition design pattern to make `ViewController`  smaller.  (README in progress)  |
+| [mvp](mvp) | Standard MVP pattern.  (README in progress)    |
 | [mvvm-rxswift-pure](mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. |
 | [mvvm-rxswift-functions-subjects-observables](mvvm-functions-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as outputs from `ViewModel`. `ViewModel` inputs are defined as subjects wrapped in functions. |
 | [mvvm-rxswift-subjects-observables](mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
-| [mvp](mvp) | Standard MVP pattern.  (README in progress)    |
-| [mvvm-closures](mvvm-closures) | Binds `ViewController` and `ViewModel` using closures and swift functions |
+| [mvvm-closures](mvvm-closures) | Binds `ViewController` and `ViewModel` using closures and swift functions (README in progress)  |
 | [rxfeedback-mvc](rxfeedback-mvc) | Uses RxFeedback in MVC architecture  (README in progress)    |
 
 
 ### Examples in progress
 | Example | Description |
 | ------------- | ------------- |
-| mvp| In Progress |
 | reactorkit | In Progress |
 | mvvm+rxfeedback | In Progress |
 | mvvm-reactive-swift | In Progress  |
