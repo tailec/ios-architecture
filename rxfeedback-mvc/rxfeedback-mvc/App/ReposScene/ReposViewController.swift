@@ -139,6 +139,7 @@ final class ReposViewController: UIViewController {
                         bindUI,
                         react(request: { $0.shouldFetchQuery }, effects: { query in
                             return self.networkingApi.searchRepos(withQuery: query)
+                                .debug(trimOutput: true)
                                 .asSignal(onErrorJustReturn: [])
                                 .map(Event.response)
                         })

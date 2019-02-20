@@ -76,6 +76,7 @@ The purpose of having examples with single page applications is highlighting con
 | [mvvm-rxswift-subjects-observables](mvvm-rxswift-subjects-observables) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) with observables as `ViewModel` outputs and subjects as `ViewModel` inputs. |
 | [mvvm-closures](mvvm-closures) | Binds `ViewController` and `ViewModel` using closures and swift functions (README in progress)  |
 | [rxfeedback-mvc](rxfeedback-mvc) | Uses RxFeedback in MVC architecture  (README in progress)    |
+| [viper](viper) | Uses VIPER architecture (README in progress) |
 
 
 ### Examples in progress
@@ -85,7 +86,6 @@ The purpose of having examples with single page applications is highlighting con
 | mvvm+rxfeedback | In Progress |
 | mvvm-reactive-swift | In Progress  |
 | reswift | In Progress  |
-| viper | In Progress  |
 | viper-rxswift | In Progress  |
 | ribs | In Progress  |
 
