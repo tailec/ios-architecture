@@ -59,7 +59,7 @@ class ReposViewController: UIViewController {
             UIApplication.shared.isNetworkActivityIndicatorVisible = loading
         }
 		viewModel.didUpdateRepos = { [weak self] repos in
-            
+            guard let strongSelf = self else { return }
             strongSelf.data = repos
             strongSelf.tableView.reloadData()
         }
