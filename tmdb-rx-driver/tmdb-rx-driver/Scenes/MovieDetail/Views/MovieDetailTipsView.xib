@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailTipsView" customModule="tmdb_mvvm_pure" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="fu5-60-vJ4" id="urF-BL-YkV"/>
+                <outlet property="statusLabel" destination="LbE-Fi-XJ7" id="8dP-LS-rch"/>
+                <outlet property="voteCountLabel" destination="h68-Ab-jnB" id="4bb-wH-GeE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fu5-60-vJ4">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-qa-l72">
+                    <rect key="frame" x="191" y="8" width="1" height="50"/>
+                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JUS-da-fgq"/>
+                        <constraint firstAttribute="width" constant="1" id="syr-As-5Sc"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Rs-ncV">
+                    <rect key="frame" x="20" y="14.5" width="151" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h68-Ab-jnB">
+                    <rect key="frame" x="20" y="35.5" width="151" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbE-Fi-XJ7">
+                    <rect key="frame" x="212" y="35.5" width="151" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzk-Pe-a7s">
+                    <rect key="frame" x="212" y="14.5" width="151" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="h68-Ab-jnB" firstAttribute="top" secondItem="aWS-Rs-ncV" secondAttribute="bottom" constant="4" id="8ot-Ho-lkN"/>
+                <constraint firstItem="NfX-qa-l72" firstAttribute="leading" secondItem="aWS-Rs-ncV" secondAttribute="trailing" constant="20" id="HHb-NV-MI3"/>
+                <constraint firstItem="LbE-Fi-XJ7" firstAttribute="leading" secondItem="NfX-qa-l72" secondAttribute="trailing" constant="20" id="I5e-W3-n2u"/>
+                <constraint firstItem="Fzk-Pe-a7s" firstAttribute="leading" secondItem="NfX-qa-l72" secondAttribute="trailing" constant="20" id="ILA-FD-irb"/>
+                <constraint firstItem="ABf-dd-o7j" firstAttribute="trailing" secondItem="Fzk-Pe-a7s" secondAttribute="trailing" constant="20" id="PoX-Ww-LTM"/>
+                <constraint firstItem="NfX-qa-l72" firstAttribute="centerX" secondItem="ABf-dd-o7j" secondAttribute="centerX" id="RZE-XX-MZh"/>
+                <constraint firstItem="LbE-Fi-XJ7" firstAttribute="top" secondItem="Fzk-Pe-a7s" secondAttribute="bottom" constant="4" id="VIK-xC-iwx"/>
+                <constraint firstItem="NfX-qa-l72" firstAttribute="top" secondItem="fu5-60-vJ4" secondAttribute="top" constant="8" id="WzK-wz-3AH"/>
+                <constraint firstItem="NfX-qa-l72" firstAttribute="leading" secondItem="h68-Ab-jnB" secondAttribute="trailing" constant="20" id="YfW-12-TY1"/>
+                <constraint firstAttribute="bottom" secondItem="NfX-qa-l72" secondAttribute="bottom" constant="8" id="ZlB-Qg-qyz"/>
+                <constraint firstItem="aWS-Rs-ncV" firstAttribute="centerY" secondItem="NfX-qa-l72" secondAttribute="centerY" constant="-10" id="a3W-cL-X63"/>
+                <constraint firstItem="Fzk-Pe-a7s" firstAttribute="centerY" secondItem="NfX-qa-l72" secondAttribute="centerY" constant="-10" id="h26-zF-Q6L"/>
+                <constraint firstItem="ABf-dd-o7j" firstAttribute="trailing" secondItem="LbE-Fi-XJ7" secondAttribute="trailing" constant="20" id="pkM-3F-C8x"/>
+                <constraint firstItem="aWS-Rs-ncV" firstAttribute="leading" secondItem="ABf-dd-o7j" secondAttribute="leading" constant="20" id="tcG-HA-gIA"/>
+                <constraint firstItem="h68-Ab-jnB" firstAttribute="leading" secondItem="ABf-dd-o7j" secondAttribute="leading" constant="20" id="yAp-bs-mtd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ABf-dd-o7j"/>
+            <point key="canvasLocation" x="82.400000000000006" y="-371.51424287856076"/>
+        </view>
+    </objects>
+</document>
