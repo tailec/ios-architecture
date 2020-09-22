@@ -41,6 +41,10 @@ ViewController: DisposeContainer {
 
 typealias NavigationPushBinder<Prop, ViewController> = NavigationBinder<Prop, NavigationPushTransition<Prop>, ViewController> where ViewController: UIViewController, ViewController: DisposeContainer
 
+typealias NavigationPopBinder<ViewController> = NavigationBinder<Void, NavigationPopTransition, ViewController> where ViewController: UIViewController, ViewController: DisposeContainer
+
+typealias DismissBinder<ViewController> = NavigationBinder<Void, DismissTransition, ViewController> where ViewController: UIViewController, ViewController: DisposeContainer
+
 extension NavigationBinder: StaticFactory {
     typealias ViewControllerFactory<Prop> = (Prop) -> UIViewController
 
@@ -66,9 +70,27 @@ extension NavigationBinder: StaticFactory {
             let transition = NavigationPushTransition(isAnimated: animated,
                                                       viewController: viewController,
                                                       presentedFactory: factory)
-            return NavigationBinder<Prop, NavigationPushTransition<Prop>, ViewController>(viewController: viewController,
-                                                                                          transition: transition,
-                                                                                          driver: driver)
+            return NavigationPushBinder<Prop, ViewController>(viewController: viewController,
+                                                              transition: transition,
+                                                              driver: driver)
+        }
+        
+        static func dismiss(viewController: ViewController,
+                            driver: Driver<Void>,
+                            animated: Bool = true) -> DismissBinder<ViewController> {
+            let transition = DismissTransition(isAnimated: animated, viewController: viewController)
+            return DismissBinder(viewController: viewController,
+                                 transition: transition,
+                                 driver: driver)
+        }
+        
+        static func pop(viewController: ViewController,
+                            driver: Driver<Void>,
+                            animated: Bool = true) -> NavigationPopBinder<ViewController> {
+            let transition = NavigationPopTransition(isAnimated: animated, viewController: viewController)
+            return NavigationPopBinder(viewController: viewController,
+                                       transition: transition,
+                                       driver: driver)
         }
 //        
 //        static func bindPush<Prop>(on container: UINavigationController & DisposeContainer,

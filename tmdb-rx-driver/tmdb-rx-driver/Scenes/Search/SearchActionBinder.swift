@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class SearchViewControllerActionBinder: ViewControllerBinder {
+final class SearchActionBinder: ViewControllerBinder {
     unowned let viewController: SearchViewController
     private let driver: SearchDriving
     

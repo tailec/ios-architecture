@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class SearchViewControllerStateBinder: ViewControllerBinder {
+final class SearchStateBinder: ViewControllerBinder {
     typealias Item = SearchResultItem
     
     struct Section: SectionModelType {
@@ -50,7 +50,7 @@ final class SearchViewControllerStateBinder: ViewControllerBinder {
         
         viewController.bag.insert(
             viewController.rx.viewWillAppear
-                .bind(onNext: unowned(self, in: SearchViewControllerStateBinder.viewWillAppear)),
+                .bind(onNext: unowned(self, in: SearchStateBinder.viewWillAppear)),
             driver.isSwitchHidden
                 .drive(viewController.segmentedControl.rx.isHidden),
             driver.isLoading
@@ -64,12 +64,12 @@ final class SearchViewControllerStateBinder: ViewControllerBinder {
     }
 }
 
-extension SearchViewControllerStateBinder: StaticFactory {
+extension SearchStateBinder: StaticFactory {
     enum Factory {
         static func `default`(_ viewController: SearchViewController,
-                              driver: SearchDriving) -> SearchViewControllerStateBinder {
+                              driver: SearchDriving) -> SearchStateBinder {
             let dataSource = RxTableViewSectionedReloadDataSource(configureCell: cellFactory)
-            return SearchViewControllerStateBinder(viewController: viewController,
+            return SearchStateBinder(viewController: viewController,
                                                    driver: driver,
                                                    dataSource: dataSource)
         }

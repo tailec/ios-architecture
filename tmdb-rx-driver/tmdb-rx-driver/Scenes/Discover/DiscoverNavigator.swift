@@ -22,14 +22,7 @@ final class DiscoverNavigator: DiscoverNavigatable {
     }
 
     func navigateToMovieDetailScreen(withMovieId id: Int, api: TMDBApiProvider) {
-        let movieDetailNavigator = MovieDetailNavigator(navigationController: navigationController)
-        let movieDetailViewModel = MovieDetailViewModel(dependencies: MovieDetailViewModel.Dependencies(id: id,
-                                                                                                        api: api,
-                                                                                                        navigator: movieDetailNavigator))
-        let movieDetailViewController = UIStoryboard.main.movieDetailViewController
-        movieDetailViewController.viewModel = movieDetailViewModel
-        
-        navigationController.show(movieDetailViewController, sender: nil)
+        navigationController.show(MovieDetailViewController.Factory.default(id: id), sender: nil)
     }
     
     func navigateToPersonDetailScreen() {

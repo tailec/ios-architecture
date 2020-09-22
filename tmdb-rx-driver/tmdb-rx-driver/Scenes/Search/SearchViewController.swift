@@ -19,9 +19,9 @@ extension SearchViewController: StaticFactory {
         static var `default`: SearchViewController {
             let vc = R.storyboard.main.searchViewController()!
             let driver = SearchDriver.Factory.default
-            let stateBinder = SearchViewControllerStateBinder.Factory
+            let stateBinder = SearchStateBinder.Factory
                 .default(vc, driver: driver)
-            let actionBinder = SearchViewControllerActionBinder(viewController: vc,
+            let actionBinder = SearchActionBinder(viewController: vc,
                                                                 driver: driver)
             let navigationBinder = NavigationPushBinder<SearchResultItem, SearchViewController>.Factory
                 .push(viewController: vc,
@@ -36,14 +36,7 @@ extension SearchViewController: StaticFactory {
         }
         
         private static func detailViewControllerFactory(_ item: SearchResultItem) -> UIViewController {
-            let movieDetailNavigator = MovieDetailNavigator(navigationController: nil)
-            let dependencies = MovieDetailViewModel.Dependencies(id: item.id,
-                                                                 api: TMDBApi.Factory.default,
-                                                                 navigator: movieDetailNavigator)
-            let movieDetailViewModel = MovieDetailViewModel(dependencies: dependencies)
-            let movieDetailViewController = UIStoryboard.main.movieDetailViewController
-            movieDetailViewController.viewModel = movieDetailViewModel
-            return movieDetailViewController
+            MovieDetailViewController.Factory.default(id: item.id)
         }
     }
 }
