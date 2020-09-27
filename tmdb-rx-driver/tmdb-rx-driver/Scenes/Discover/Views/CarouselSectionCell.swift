@@ -9,10 +9,10 @@
 import UIKit
 
 final class CarouselSectionCell: UITableViewCell {
-    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private (set) var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private (set) var titleLabel: UILabel!
+    @IBOutlet private (set) var subtitleLabel: UILabel!
+    @IBOutlet private (set) var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         let layout: UICollectionViewFlowLayout = {

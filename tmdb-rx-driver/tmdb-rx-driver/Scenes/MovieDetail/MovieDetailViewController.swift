@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 final class MovieDetailViewController: DisposeViewController {
-    @IBOutlet weak var headerView: MovieDetailHeaderView!
-    @IBOutlet weak var tipsView: MovieDetailTipsView!
-    @IBOutlet weak var posterImageView: GradientImageView!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet private(set) var headerView: MovieDetailHeaderView!
+    @IBOutlet private(set) var tipsView: MovieDetailTipsView!
+    @IBOutlet private(set) var posterImageView: GradientImageView!
+    @IBOutlet private(set) var backButton: UIButton!
 }
 
 extension MovieDetailViewController: StaticFactory {

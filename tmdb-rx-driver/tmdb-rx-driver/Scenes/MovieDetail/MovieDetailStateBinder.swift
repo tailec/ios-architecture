@@ -7,6 +7,7 @@
 
 import Foundation
 import Nuke
+
 final class MovieDetailStateBinder: ViewControllerBinder {
     unowned let viewController: MovieDetailViewController
     private let driver: MovieDetailDriving

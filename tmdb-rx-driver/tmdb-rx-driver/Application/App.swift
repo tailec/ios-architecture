@@ -18,9 +18,7 @@ final class App {
         let discoverViewController = UIStoryboard.main.discoverViewController
         discoverViewController.viewModel = discoverViewModel
         
-        let searchNavigationController = UINavigationController()
-//        let searchNavigator = SearchNavigator(navigationController: searchNavigationController)
-        let searchViewController = SearchViewController.Factory.default
+        let searchNavigationController = UINavigationController(rootViewController: SearchViewController.Factory.default)
         
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barTintColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
@@ -29,7 +27,6 @@ final class App {
         discoverNavigationController.tabBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)
         discoverNavigationController.viewControllers = [discoverViewController]
         
-        searchNavigationController.viewControllers = [searchViewController]
         searchNavigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
         
         tabBarController.viewControllers = [
@@ -37,12 +34,7 @@ final class App {
             searchNavigationController
         ]
         
-        let loginNavigationController = UINavigationController()
-        let loginNavigator = LoginNavigator(navigationController: loginNavigationController)
-        let loginViewModel = LoginViewModel(dependencies: LoginViewModel.Dependencies(api: TMDBApi(), navigator: loginNavigator))
-        let loginViewController = UIStoryboard.main.loginViewController
-        loginViewController.viewModel = loginViewModel
-        loginNavigationController.viewControllers = [loginViewController]
+        let loginNavigationController = UINavigationController(rootViewController: LoginViewController.Factory.default)
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()

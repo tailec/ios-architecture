@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 final class SearchViewController: DisposeViewController {
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private(set) var searchTextField: UITextField!
+    @IBOutlet private(set) var segmentedControl: UISegmentedControl!
+    @IBOutlet private(set) var tableView: UITableView!
 }
 
 extension SearchViewController: StaticFactory {

@@ -13,7 +13,7 @@ import RxCocoa
 final class DiscoverViewController: UIViewController {
     var viewModel: DiscoverViewModel!
     
-    @IBOutlet weak var carouselsView: DiscoverMainView!
+    @IBOutlet private (set) var carouselsView: DiscoverMainView!
     
     private let disposeBag = DisposeBag()
     

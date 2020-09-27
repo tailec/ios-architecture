@@ -10,9 +10,9 @@ import UIKit
 import Nuke
 
 class SearchCell: UITableViewCell {
-    @IBOutlet weak var titleImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet private(set) var titleImageView: UIImageView!
+    @IBOutlet private(set) var titleLabel: UILabel!
+    @IBOutlet private(set) var subtitleLabel: UILabel!
     
     override func awakeFromNib() {
         selectionStyle = .none

@@ -9,9 +9,9 @@
 import UIKit
 
 final class MovieDetailTipsView: UIView {
-    @IBOutlet weak var voteCountLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private(set) var voteCountLabel: UILabel!
+    @IBOutlet private(set) var statusLabel: UILabel!
+    @IBOutlet private(set) var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
