@@ -14,6 +14,7 @@ enum LoginViewState {
     case failure
     case loading
     case disabled
+    case enabled
 }
 
 protocol LoginDriving: class {
@@ -61,9 +62,7 @@ final class LoginDriver: LoginDriving {
     }
     
     private func validateCredentials() {
-        if !areCredentialsValid {
-            stateRelay.accept(.disabled)
-        }
+        stateRelay.accept(areCredentialsValid ? .enabled : .disabled)
     }
 }
 
