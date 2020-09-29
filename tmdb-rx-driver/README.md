@@ -1,17 +1,13 @@
-# tmdb-mvvm-rxswift-pure
+# tmdb-mvvm-rxswift-driver
 🔒 ** If you want to login, use username `iostest` and password `test`.**
 
 
-This example uses RxSwift observables as binding mechanism between `ViewModel` and `ViewController`. Also, it uses simple navigator for transitions between screns.
+This example uses RxSwift Drivers as binding mechanism between `Driver` and `ViewController`.
+### [Read Wiki](https://github.com/dmsl1805/Cookbook/wiki)
 
 | ![](1.png) | ![](2.png) |
 | --- | --- |
 | ![](3.png) | ![](4.png) |
-
-
-## Implementation
-### [Read Wiki](https://github.com/dmsl1805/Cookbook/wiki)
-
 
 ## Installation
 Clone the repository:
