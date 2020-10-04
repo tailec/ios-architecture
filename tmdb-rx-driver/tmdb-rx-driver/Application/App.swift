@@ -12,11 +12,8 @@ final class App {
     static let shared = App()
     
     func startInterface(in window: UIWindow) {
-        let discoverNavigationController = UINavigationController()
-        let discoverNavigator = DiscoverNavigator(navigationController: discoverNavigationController)
-        let discoverViewModel = DiscoverViewModel(dependencies: DiscoverViewModel.Dependencies(api: TMDBApi(), navigator: discoverNavigator))
-        let discoverViewController = UIStoryboard.main.discoverViewController
-        discoverViewController.viewModel = discoverViewModel
+        let discoverViewController = DiscoverViewController.Factory.default
+        let discoverNavigationController = UINavigationController(rootViewController: discoverViewController)
         
         let searchNavigationController = UINavigationController(rootViewController: SearchViewController.Factory.default)
         
@@ -25,7 +22,6 @@ final class App {
         tabBarController.tabBar.tintColor = .white
 
         discoverNavigationController.tabBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)
-        discoverNavigationController.viewControllers = [discoverViewController]
         
         searchNavigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
         

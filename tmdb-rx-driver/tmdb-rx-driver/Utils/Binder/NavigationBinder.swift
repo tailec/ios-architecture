@@ -46,7 +46,7 @@ typealias NavigationPopBinder<ViewController> = NavigationBinder<Void, Navigatio
 typealias DismissBinder<ViewController> = NavigationBinder<Void, DismissTransition, ViewController> where ViewController: UIViewController, ViewController: DisposeContainer
 
 extension NavigationBinder: StaticFactory {
-    typealias ViewControllerFactory<Prop> = (Prop) -> UIViewController
+    typealias ViewControllerFactory<Prop> = (Prop) -> UIViewController?
 
     enum Factory {
         static func present(viewController: ViewController,

@@ -18,12 +18,12 @@ final class PresentTransition<Prop>: Disposable, Transitioning {
     private let isAnimated: Bool
     private unowned let viewController: UIViewController
     private let sourceViewFactory: (() -> UIView)?
-    private let presentedFactory: (Prop) -> UIViewController
+    private let presentedFactory: (Prop) -> UIViewController?
     
     init(isAnimated: Bool,
          viewController: UIViewController,
          sourceViewFactory: (() -> UIView)?,
-         presentedFactory: @escaping (Prop) -> UIViewController) {
+         presentedFactory: @escaping (Prop) -> UIViewController?) {
         self.isAnimated = isAnimated
         self.viewController = viewController
         self.sourceViewFactory = sourceViewFactory
@@ -33,7 +33,7 @@ final class PresentTransition<Prop>: Disposable, Transitioning {
     func dispose() { }
 
     func perform(prop: Prop) {
-        let presented = presentedFactory(prop)
+        guard let presented = presentedFactory(prop) else { return }
         presented.popoverPresentationController?.sourceView = sourceViewFactory?()
         viewController.present(presented, animated: isAnimated)
     }
@@ -58,11 +58,11 @@ final class DismissTransition: Disposable, Transitioning {
 final class NavigationPushTransition<Prop>: Disposable, Transitioning {
     private let isAnimated: Bool
     private unowned let viewController: UIViewController
-    private let presentedFactory: (Prop) -> UIViewController
+    private let presentedFactory: (Prop) -> UIViewController?
     
     init(isAnimated: Bool,
          viewController: UIViewController,
-         presentedFactory: @escaping (Prop) -> UIViewController) {
+         presentedFactory: @escaping (Prop) -> UIViewController?) {
         self.isAnimated = isAnimated
         self.viewController = viewController
         self.presentedFactory = presentedFactory
@@ -71,8 +71,9 @@ final class NavigationPushTransition<Prop>: Disposable, Transitioning {
     func dispose() { }
 
     func perform(prop: Prop) {
+        guard let presented = presentedFactory(prop) else { return }
         viewController.navigationController?
-            .pushViewController(presentedFactory(prop), animated: isAnimated)
+            .pushViewController(presented, animated: isAnimated)
     }
 }
 

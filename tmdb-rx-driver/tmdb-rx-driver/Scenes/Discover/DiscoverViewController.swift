@@ -10,47 +10,35 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class DiscoverViewController: UIViewController {
-    var viewModel: DiscoverViewModel!
-    
+final class DiscoverViewController: DisposeViewController {
     @IBOutlet private (set) var carouselsView: DiscoverMainView!
-    
-    private let disposeBag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindViewModel()
-    }
+}
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    private func bindViewModel() {
-        let input = DiscoverViewModel.Input(ready: rx.viewWillAppear.map({ _ in }).asDriver(),
-                                            selected: carouselsView.selectedIndex.asDriver(onErrorJustReturn: (0, 0)))
+extension DiscoverViewController: StaticFactory {
+    enum Factory {
+        static var `default`: DiscoverViewController {
+            let vc = UIStoryboard.main.discoverViewController
+            let driver = DiscoverDriver(api: TMDBApi.Factory.default)
+            let binder = DiscoverViewControllerBinder(viewController: vc, driver: driver)
+            let navigationBinder = NavigationPushBinder<DiscoverSelection, DiscoverViewController>.Factory
+                .push(viewController: vc,
+                      driver: driver.didSelect,
+                      factory: viewControllerFactory)
+            
+            vc.bag.insert(
+                binder,
+                navigationBinder
+            )
+            return vc
+        }
         
-        let output = viewModel.transform(input: input)
-        
-        output.loading
-            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-            .disposed(by: disposeBag)
-        
-        output.results
-            .drive(onNext: { [weak self] caroselViewModel in
-                guard let strongSelf = self else { return }
-                strongSelf.carouselsView.setDataSource(caroselViewModel)
-                strongSelf.carouselsView.reloadData()
-            })
-            .disposed(by: disposeBag)
-        
-        output.selected
-            .drive()
-            .disposed(by: disposeBag)
+        private static func viewControllerFactory(selection: DiscoverSelection) -> UIViewController? {
+            switch selection.item {
+            case .movie:
+                return MovieDetailViewController.Factory.default(id: selection.index)
+            case .person, .show:
+                return nil
+            }
+        }
     }
 }
