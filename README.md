@@ -64,6 +64,7 @@ This repository hosts each sample app in separate directory.
 | Example | Description |
 | ------------- | ------------- |
 | [tmdb-mvvm-rxswift-pure](tmdb-mvvm-rxswift-pure) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `ViewModel`. Also, it uses simple navigator pattern for transitions between screens. (README in progress) |
+| [tmdb-rx-driver](tmdb-rx-driver) | Uses [RxSwift](https://github.com/ReactiveX/RxSwift) and observables as binding mechanism between `ViewController` and `Driver`. Also, it uses binding techniques to separate logic. [Wiki.](https://github.com/dmsl1805/Cookbook/wiki) |
 
 
 ### Single screen app examples
