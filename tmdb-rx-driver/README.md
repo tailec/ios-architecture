@@ -12,9 +12,11 @@ This example uses RxSwift Drivers as binding mechanism between `Driver` and `Vie
 ## Installation
 Clone the repository:
 
-`git clone git@github.com:tailec/ios-architecture.git`
+`git clone git@github.com:dmsl1805/ios-architecture.git`
 
-Navigate to `tmdb-mvvm-pure` directory:
+branch `dsml`
+
+Navigate to `tmdb-rx-driver` directory:
 
 `cd tmdb-mvvm-pure`
 
