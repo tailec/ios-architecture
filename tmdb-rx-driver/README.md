@@ -18,7 +18,7 @@ branch `dsml`
 
 Navigate to `tmdb-rx-driver` directory:
 
-`cd tmdb-mvvm-pure`
+`cd tmdb-rx-driver`
 
 Install dependencies:
 
