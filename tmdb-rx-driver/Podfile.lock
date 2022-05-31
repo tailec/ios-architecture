@@ -1,0 +1,65 @@
+PODS:
+  - Differentiator (4.0.1)
+  - Nuke (7.6.3)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxViewController (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+
+DEPENDENCIES:
+  - Nuke (~> 7.0)
+  - R.swift
+  - RxCocoa (~> 5)
+  - RxDataSources
+  - RxSwift (~> 5)
+  - RxSwiftExt (~> 5)
+  - RxViewController
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - Nuke
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxViewController
+
+SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
+
+PODFILE CHECKSUM: 1b323ff7b941979a9274ad85169b0f5f4130f733
+
+COCOAPODS: 1.9.3
